@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./libraries/main/images/favicon.png">
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./libraries/main/css/lib/html5-editor/bootstrap-wysihtml5.css" />
+    <!-- Bootstrap Core CSS -->
+    <link href="./libraries/main/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./libraries/main/css/helper.css" rel="stylesheet">
+    <link href="./libraries/main/css/style.css" rel="stylesheet">
+
+    <title>Bitcoin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./libraries/main/bootstrap.min.css">
+
+    <script type="text/javascript" src="./libraries/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="./libraries/jquery.countdownTimer.js"></script>
+    <link rel="stylesheet" type="text/css" href="./libraries/jquery.countdownTimer.css" />
+
+    <script src="./libraries/angular.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
+    <!--[if lt IE 9]>
+    <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar" ng-app="tableApp" ng-controller="tableCtrl">
+    <!-- Preloader - style you can find in spinners.css -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <!-- Main wrapper  -->
+    <div id="main-wrapper">
+        <div class="header">
+
+        </div>
+        <!-- End header header -->
+        <!-- Left Sidebar  -->
+        <div class="left-sidebar" style="background-color: black;">
+                <img src="./libraries/main/images/logo.png" style="margin-top: -30%;" height="50" width="70">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" style="background-color: black;">
+                    
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav" style="background-color: black;">
+                    <ul id="sidebarnav">
+                        <li class="nav-devider"></li>
+
+                        
+
+                        <li>
+                            <a href="/" aria-expanded="false">
+                                <i class="fa fa-tachometer"></i>
+                                <span class="hide-menu">Pool
+
+                                </span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="/Vault" aria-expanded="false">
+                                <i class="fa fa-columns"></i>
+                                <span class="hide-menu">ORME Vaults</span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="/Chart" aria-expanded="false">
+                                <i class="fa fa-envelope"></i>
+                                <span class="hide-menu">BTC Mined</span>
+                            </a>
+
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </div>
+        <!-- End Left Sidebar  -->
+        <!-- Page wrapper  -->
+        <div class="page-wrapper" style="background-color: black;">
+            <!-- Bread crumb -->
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-primary">ORME Vaults</h3>
+                </div>
+
+                <div class="col-md-7 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0)" style="color:goldenrod">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active">ORME Vaults</li>
+                    </ol>
+                </div>
+            </div>
+            <hr id="hr2">
+            <!-- End Bread crumb -->
+            <!-- Container fluid  -->
+
+            <style>
+                .button {
+                    background-color: goldenrod;
+                    /* Green */
+                    border: none;
+                    color: black;
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+
+                .button:hover {
+
+                    background-color: white;
+                    color: goldenrod;
+                }
+
+                #hr2 {
+
+                    border-top: 1px solid goldenrod;
+                    width: 99%;
+                    margin-left: 0%;
+
+                }
+
+                .hide-menu:hover {
+
+                    color: goldenrod;
+                }
+
+                .modal-dialog {
+
+                    max-width: 1500px;
+                    width: 1000px;
+                }
+
+
+                .modal-title {
+                    padding-right: 82%;
+                    width: 100%;
+                    line-height: 1.42857143;
+
+                }
+
+                .table>tbody>tr>td {
+
+                    background-color: white;
+                    color: black;
+                }
+
+                
+            </style>
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("usercard");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }
+            </script>
+
+
+            <div class="container-fluid">
+                <!-- Start Page Content -->
+                <div class="row">
+                    <div class="col-12">
+
+                        <section class="card">
+                            <div class="row">
+
+                                <input type="button" class="button" value="VAULT1" data-toggle="modal" data-target="#myModal1"> &nbsp; &nbsp; &nbsp;
+                                <input type="button" class="button" value="VAULT2" data-toggle="modal" data-target="#myModal2"> &nbsp; &nbsp; &nbsp;
+                                <input type="button" class="button" value="VAULT3" data-toggle="modal" data-target="#myModal3"> &nbsp; &nbsp; &nbsp;
+
+                                <input type="button" class="button" value="VAULT4" data-toggle="modal" data-target="#myModal4"> &nbsp; &nbsp; &nbsp;
+                                <input type="button" class="button" value="VAULT5" data-toggle="modal" data-target="#myModal5">
+
+                            </div>
+
+                            <br>
+                            <br>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal1" role="dialog">
+                                <div class="modal-dialog" style="margin-top: 35%;">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Bitcoin Address</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+
+                                                <div class="col-sm-7">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Summary</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Address</td>
+                                                                <td>3KndQPg6xdKm98MFcZ7FieSxgW3kef3QEw</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Hash 160</td>
+                                                                <td>c681f6141f14ab26eafd8a21872732050b534bde</td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Transactions</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>No. Transactions </td>
+                                                                <td>4</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Total Received</td>
+                                                                <td>149.57073819 BTC</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Final Balance</td>
+                                                                <td>149.57073819 BTC</td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>dfc12bfdc7e25ecf939e1cac49d39a173eef4487b515892402f7f0004caaccd5</th>
+                                                                <th>2018-04-16 13:22:47</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1Bshsb6JE1M5LoQu7PsPapEH8TXYQeckqf </td>
+                                                                <td> 3KndQPg6xdKm98MFcZ7FieSxgW3kef3QEw </td>
+                                                                <td>32 BTC</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1H2cRamFnxMQN537jVm9JPXuUwz6QnCgHL</td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>18yo6uu5LJsx1siVbjcqrzp7a31tcdVDey</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>19pwRUwGwXJ7nsRsTPNHAWqmkGANCMiXPU</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>18yo6uu5LJsx1siVbjcqrzp7a31tcdVDey</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>14h7rUS6KFhGEHBJ9ShjHkhQoMXXp9zSq5</td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1MPoeEL2kMgXdSVvYtkarBVtzy44WrpuHP</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>13TMxp97b92hAHuSWDiJh1MBkQC9LCff9t</td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- 
+                                                <div class="col-sm-6">
+
+                                                    <table class="table">
+                                                        <tbody ng-repeat="tx in txsArray">
+                                                            <tr>
+                                                                <th style="text-align: left;">{{tx.hash}}</th>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div> -->
+
+
+
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>7c3ef17c56048e46b05c011ec00e7f4b37e47dc38e42790c1fc17702d369f4bb</th>
+                                                                <th>2018-04-14 01:04:26</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1N52wHoVR79PMDishab2XmRHsbekCdGquK</td>
+                                                                <td> 3KndQPg6xdKm98MFcZ7FieSxgW3kef3QEw </td>
+                                                                <td>99.9995 BTC</td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>0e222dae28fafed789fd28ebfc812a22649737814695dd583abfc4f8622977c9</th>
+                                                                <th>2018-04-14 00:38:45
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1N52wHoVR79PMDishab2XmRHsbekCdGquK</td>
+                                                                <td> 3KndQPg6xdKm98MFcZ7FieSxgW3kef3QEw </td>
+                                                                <td>0.005 BTC</td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal4" role="dialog">
+                                <div class="modal-dialog" style="margin-top: 35%;">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Bitcoin Address</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+
+                                                <div class="col-sm-7">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Summary</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Address</td>
+                                                                <td> 3EQuG6Hr1xjeL4BYzoes9ekPmsckrmH4de</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Hash 160</td>
+                                                                <td>8b8d6af79ff684e3e4e6d611889379a533b76f9c</td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Transactions</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>No. Transactions </td>
+                                                                <td>2</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Total Received</td>
+                                                                <td>32.005 BTC</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Final Balance</td>
+                                                                <td>32.005 BTC</td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>6b0579d0ea7c548a4aff6b4d2b80b1aa2e78d0cd19696ff1025f2c8fa3a56e26</th>
+                                                                <th>2018-04-16 13:27:21
+
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1NXx7NVbUgeHaWc1hPMQLHq2zLM76rXwm5 </td>
+                                                                <td> 3EQuG6Hr1xjeL4BYzoes9ekPmsckrmH4de </td>
+                                                                <td>32 BTC</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1Ks2qXcxviFPvJneBaEJ8a4BnMLEgSbpBs</td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1Pxkusa6Sz5F6gkpsBs8pFTetZf26ZHTp</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    1Bek4LndTwMU5VjBuFrsg6vGqDMPubsqc7</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>1M5BRUxmARkkH4r2LJEeHaWxCzxUAJmxoG</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>1C7pgxicqCJsavThQg9JyKDjNCPqE4qhZm</td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1LLz1aUkKYo95FudxsVkpPX3UAXhju3r9e</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>1CopZYDjSLDWUtNEQKSEnHTKnxbK2tX3xH </td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- 
+                                                    <div class="col-sm-6">
+    
+                                                        <table class="table">
+                                                            <tbody ng-repeat="tx in txsArray">
+                                                                <tr>
+                                                                    <th style="text-align: left;">{{tx.hash}}</th>
+    
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div> -->
+
+
+
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>0e222dae28fafed789fd28ebfc812a22649737814695dd583abfc4f8622977c9</th>
+                                                                <th>2018-04-14 00:38:45
+
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1N52wHoVR79PMDishab2XmRHsbekCdGquK</td>
+                                                                <td> 3NrbPW9FhppiH7jJQSsFAqAH9ztod4gCWS </td>
+                                                                <td>0.005 BTC</td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade" id="myModal3" role="dialog">
+                                <div class="modal-dialog" style="margin-top: 35%;">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Bitcoin Address</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+
+                                                <div class="col-sm-7">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Summary</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Address</td>
+                                                                <td>3K6acH3xRt1NpPVySjH6EkzKwjrCimbHzK</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Hash 160</td>
+                                                                <td>beeefd5412a2d1b9cd824dbda3ac1c572dcd182b</td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Transactions</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>No. Transactions </td>
+                                                                <td>2</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Total Received</td>
+                                                                <td>32.005 BTC</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Final Balance</td>
+                                                                <td>32.005 BTC</td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>a2c5cb73afe9632e14c00f5fe8be214bf293cd67a57de59f0ed2208cbbef3717</th>
+                                                                <th>2018-04-16 13:24:29
+
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1ExZUcyCnQcAhMonhz2cm6dW9FXM86wTt7 </td>
+                                                                <td> 3K6acH3xRt1NpPVySjH6EkzKwjrCimbHzK </td>
+                                                                <td>32 BTC</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>14fvaywtcLKi8XPQy9T1L6wJDBY6Ki7r6b</td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>16V4q6bBFVxZFNDKSsLjex4X6Jq443594</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>1AGZgrvq6rZ3qeWjRMc86Zg6WAwVBmLcrx</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>1NDSRBYmif8uoaSC2ENcrL4Qt66VwBirJw</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>1H2RTH1WZG8RDyepJDKK4MoSaiMaKUe4Ed</td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1LY6tVtu15UAQjuEu3DhgJzaxvaU2y3u1a</td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>1PFPBPYzJWKccerRkQniz66BZF1BoCsPyg </td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>1H6TtScrExu78HTxV1gFdoNQLt5E1KNaWB </td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>19Fti23k8Lnuh7nipnqB21w6E7v4oszGAf </td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- 
+                                                        <div class="col-sm-6">
+        
+                                                            <table class="table">
+                                                                <tbody ng-repeat="tx in txsArray">
+                                                                    <tr>
+                                                                        <th style="text-align: left;">{{tx.hash}}</th>
+        
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div> -->
+
+
+
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>0e222dae28fafed789fd28ebfc812a22649737814695dd583abfc4f8622977c9</th>
+                                                                <th>2018-04-14 00:38:45
+
+
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1N52wHoVR79PMDishab2XmRHsbekCdGquK</td>
+                                                                <td> 3K6acH3xRt1NpPVySjH6EkzKwjrCimbHzK </td>
+                                                                <td>0.005 BTC</td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade" id="myModal2" role="dialog">
+                                    <div class="modal-dialog" style="margin-top: 35%;">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Bitcoin Address</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+
+                                        <div class="col-sm-7">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Summary</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Address</td>
+                                                        <td>3K6acH3xRt1NpPVySjH6EkzKwjrCimbHzK</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hash 160</td>
+                                                        <td>beeefd5412a2d1b9cd824dbda3ac1c572dcd182b</td>
+
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Transactions</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>No. Transactions </td>
+                                                        <td>2</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Total Received</td>
+                                                        <td>32.005 BTC</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Final Balance</td>
+                                                        <td>32.005 BTC</td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-sm-12">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>a2c5cb73afe9632e14c00f5fe8be214bf293cd67a57de59f0ed2208cbbef3717</th>
+                                                        <th>2018-04-16 13:24:29
+
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1ExZUcyCnQcAhMonhz2cm6dW9FXM86wTt7 </td>
+                                                        <td> 3K6acH3xRt1NpPVySjH6EkzKwjrCimbHzK </td>
+                                                        <td>32 BTC</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14fvaywtcLKi8XPQy9T1L6wJDBY6Ki7r6b</td>
+                                                        <td></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16V4q6bBFVxZFNDKSsLjex4X6Jq443594</td>
+                                                        <td></td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>1AGZgrvq6rZ3qeWjRMc86Zg6WAwVBmLcrx</td>
+                                                        <td></td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>1NDSRBYmif8uoaSC2ENcrL4Qt66VwBirJw</td>
+                                                        <td></td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>1H2RTH1WZG8RDyepJDKK4MoSaiMaKUe4Ed</td>
+                                                        <td></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1LY6tVtu15UAQjuEu3DhgJzaxvaU2y3u1a</td>
+                                                        <td></td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>1PFPBPYzJWKccerRkQniz66BZF1BoCsPyg </td>
+                                                        <td></td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>1H6TtScrExu78HTxV1gFdoNQLt5E1KNaWB </td>
+                                                        <td></td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>19Fti23k8Lnuh7nipnqB21w6E7v4oszGAf </td>
+                                                        <td></td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- 
+                                                    <div class="col-sm-6">
+    
+                                                        <table class="table">
+                                                            <tbody ng-repeat="tx in txsArray">
+                                                                <tr>
+                                                                    <th style="text-align: left;">{{tx.hash}}</th>
+    
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div> -->
+
+
+
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-sm-12">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>0e222dae28fafed789fd28ebfc812a22649737814695dd583abfc4f8622977c9</th>
+                                                        <th>2018-04-14 00:38:45
+
+
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1N52wHoVR79PMDishab2XmRHsbekCdGquK</td>
+                                                        <td> 3K6acH3xRt1NpPVySjH6EkzKwjrCimbHzK </td>
+                                                        <td>0.005 BTC</td>
+
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="myModal5" role="dialog">
+                    <div class="modal-dialog" style="margin-top: 35%;">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Bitcoin Address</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+
+                                    <div class="col-sm-7">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Summary</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Address</td>
+                                                    <td> 3EUuYHDiSBft9fsXecGFUioeR4ye24aRG9</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Hash 160</td>
+                                                    <td>8c4f508ebe3db384e67f724a4f7a79791e1ee2e4</td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Transactions</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>No. Transactions </td>
+                                                    <td>2</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Received</td>
+                                                    <td>32.005 BTC</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Final Balance</td>
+                                                    <td>32.005 BTC</td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-sm-12">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>370b88a4f58e4db45f3f6e6c1eced0ea6c2edb740e8fe48c7639db9e0ca3e25a</th>
+                                                    <th>2018-04-16 13:28:17
+
+
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1J34Ks5g2e2dBKGSL86s6YVAkERqAdWkjm </td>
+                                                    <td> 3EUuYHDiSBft9fsXecGFUioeR4ye24aRG9  </td>
+                                                    <td>32 BTC</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>12LGSr9EXtrSUMRRCvUTxdSXZoVNFPQ8mS</td>
+                                                    <td></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>1B775eRpCJVCtnzBjTAdyc2NehUGFRZb1W</td>
+                                                    <td></td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>1GnMS5WSnBDye1Md3r6rs6wdHkX2GjNC2P</td>
+                                                    <td></td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>17y26NaheBVMfvxZXGUjZizCjv6qnEPnuh</td>
+                                                    <td></td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>14n7tjSfE5yNYZq7L4r2QghVXSv3EfnZE6</td>
+                                                    <td></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>1DGupKuj2Yw513Supc2SymrMcsVLYuPXha</td>
+                                                    <td></td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>12Zb2kKKP6suE5ksAM3mPNPcqbfoeatFsH </td>
+                                                    <td></td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>1JVvRZtCrefSLdqASG4XU61pZEKjhCYasq </td>
+                                                    <td></td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>19Fti23k8Lnuh7nipnqB21w6E7v4oszGAf </td>
+                                                    <td></td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 
+                                                <div class="col-sm-6">
+
+                                                    <table class="table">
+                                                        <tbody ng-repeat="tx in txsArray">
+                                                            <tr>
+                                                                <th style="text-align: left;">{{tx.hash}}</th>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div> -->
+
+
+
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-sm-12">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>0e222dae28fafed789fd28ebfc812a22649737814695dd583abfc4f8622977c9</th>
+                                                    <th>2018-04-14 00:38:45
+
+
+
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1N52wHoVR79PMDishab2XmRHsbekCdGquK</td>
+                                                    <td> 3EUuYHDiSBft9fsXecGFUioeR4ye24aRG9  </td>
+                                                    <td>0.005 BTC</td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                </div>
+
+                <script>
+                    window.onload = function () {
+
+                        var chart = new CanvasJS.Chart("chartContainer", {
+                            animationEnabled: true,
+                            theme: "light2",
+                            backgroundColor: "darkgrey",
+                            title: {
+                                text: "Hashrate Distribution"
+                            },
+                            axisX: {
+                                valueFormatString: "DD MMM",
+                                crosshair: {
+                                    enabled: true,
+                                    snapToDataPoint: true
+                                }
+                            },
+                            axisY: {
+                                title: "Number of Bitcoins",
+                                crosshair: {
+                                    enabled: true
+                                }
+                            },
+                            toolTip: {
+                                shared: true
+                            },
+                            legend: {
+                                cursor: "pointer",
+                                verticalAlign: "bottom",
+                                horizontalAlign: "left",
+                                dockInsidePlotArea: true,
+                                itemclick: toogleDataSeries,
+                                color: "white"
+                            },
+                            data: [{
+                                    type: "line",
+                                    showInLegend: true,
+                                    name: "LITECOIN MH/S",
+                                    markerType: "square",
+                                    lineColor: "grey",
+                                    color: "grey",
+                                    xValueFormatString: "DD MMM, YYYY",
+                                    color: "#F08080",
+                                    dataPoints: [{
+                                            x: new Date(2018, 2, 15),
+                                            y: 650
+                                        },
+                                        {
+                                            x: new Date(2018, 2, 22),
+                                            y: 700
+                                        },
+                                        {
+                                            x: new Date(2018, 2, 29),
+                                            y: 710
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 6),
+                                            y: 658
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 13),
+                                            y: 734 
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 19),
+                                            y: 963
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 26),
+                                            y: 847
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 3),
+                                            y: 853
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 10),
+                                            y: 869 
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 17),
+                                            y: 943
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 24),
+                                            y: 870
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 31),
+                                            y: 869
+                                        },
+                                        {
+                                            x: new Date(2018, 5, 7),
+                                            y: 890
+                                        },
+                                        {
+                                            x: new Date(2018, 5, 14),
+                                            y: 930
+                                        }
+                                    ]
+                                },
+                                {
+                                    type: "line",
+                                    showInLegend: true,
+                                    name: "ETHEREUM  GH/S",
+                                    lineDashType: "dash",
+                                    lineColor: "black",
+                                    color: "black",
+                                    dataPoints: [{
+                                            x: new Date(2018, 2, 15),
+                                            y: 510
+                                        },
+                                        {
+                                            x: new Date(2018, 2, 22),
+                                            y: 560
+                                        },
+                                        {
+                                            x: new Date(2018, 2, 29),
+                                            y: 540
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 5),
+                                            y: 558
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 12),
+                                            y: 544
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 19),
+                                            y: 693
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 26),
+                                            y: 657
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 3),
+                                            y: 663
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 10),
+                                            y: 639
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 17),
+                                            y: 673
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 24),
+                                            y: 660
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 31),
+                                            y: 762
+                                        },
+                                        {
+                                            x: new Date(2018, 5, 7),
+                                            y: 843
+                                        },
+                                        {
+                                            x: new Date(2018, 5, 14),
+                                            y: 870
+                                        }
+                                    ]
+                                },
+                                {
+                                    type: "line",
+                                    showInLegend: true,
+                                    name: "DASHCOIN GH/S",
+                                    lineColor: "blue",
+                                    color: "blue",
+                                    markerType: "square",
+                                    dataPoints: [{
+                                            x: new Date(2018, 2, 15),
+                                            y: 410
+                                        },
+                                        {
+                                            x: new Date(2018, 2, 22),
+                                            y: 460
+                                        },
+                                        {
+                                            x: new Date(2018, 2, 29),
+                                            y: 140
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 5),
+                                            y: 658
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 12),
+                                            y: 244
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 19),
+                                            y: 793
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 26),
+                                            y: 157
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 3),
+                                            y: 63
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 10),
+                                            y: 939
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 17),
+                                            y: 373
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 24),
+                                            y: 460
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 31),
+                                            y: 562
+                                        },
+                                        {
+                                            x: new Date(2018, 5, 7),
+                                            y: 443
+                                        },
+                                        {
+                                            x: new Date(2018, 5, 14),
+                                            y: 670
+                                        }
+                                    ]
+                                },
+                                {
+                                    type: "line",
+                                    showInLegend: true,
+                                    name: "BITCOIN GH/S",
+                                    lineColor: "gold",
+                                    color: "gold",
+                                    lineDashType: "dash",
+                                    dataPoints: [{
+                                            x: new Date(2018, 2, 15),
+                                            y: 410
+                                        },
+                                        {
+                                            x: new Date(2018, 2, 22),
+                                            y: 660
+                                        },
+                                        {
+                                            x: new Date(2018, 2, 29),
+                                            y: 340
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 5),
+                                            y: 158
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 12),
+                                            y: 244
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 19),
+                                            y: 493
+                                        },
+                                        {
+                                            x: new Date(2018, 3, 26),
+                                            y: 257
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 3),
+                                            y: 863
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 10),
+                                            y: 339
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 17),
+                                            y: 473
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 24),
+                                            y: 760
+                                        },
+                                        {
+                                            x: new Date(2018, 4, 31),
+                                            y: 162
+                                        },
+                                        {
+                                            x: new Date(2018, 5, 7),
+                                            y: 943
+                                        },
+                                        {
+                                            x: new Date(2018, 5, 14),
+                                            y: 970
+                                        }
+                                    ]
+                                }
+                            ]
+                        });
+                        chart.render();
+
+                        function toogleDataSeries(e) {
+                            if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                                e.dataSeries.visible = false;
+                            } else {
+                                e.dataSeries.visible = true;
+                            }
+                            chart.render();
+                        }
+
+                    }
+                </script>
+
+
+                </section>
+
+            </div>
+        </div>
+        <!-- End PAge Content -->
+    </div>
+    <!-- End Container fluid  -->
+    <!-- footer -->
+
+    <!-- End footer -->
+    </div>
+    <!-- End Page wrapper  -->
+    </div>
+    <!-- End Wrapper -->
+    <!-- All Jquery -->
+    <script src="./libraries/main/js/lib/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="./libraries/main/js/lib/bootstrap/js/popper.min.js"></script>
+    <script src="./libraries/main/js/lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="./libraries/main/js/jquery.slimscroll.js"></script>
+    <!--Menu sidebar -->
+    <script src="./libraries/main/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="./libraries/main/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="./libraries/main/js/lib/html5-editor/wysihtml5-0.3.0.js"></script>
+    <script src="./libraries/main/js/lib/html5-editor/bootstrap-wysihtml5.js"></script>
+    <script src="./libraries/main/js/lib/html5-editor/wysihtml5-init.js"></script>
+    <!--Custom JavaScript -->
+    <script src="./libraries/main/js/custom.min.js"></script>
+    <script src="./angular/tables.js"></script>
+
+</body>
+
+</html>

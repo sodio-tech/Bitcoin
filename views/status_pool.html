@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+
+
+
+    <link rel="stylesheet" href="./libraries/main/css/lib/html5-editor/bootstrap-wysihtml5.css" />
+    <!-- Bootstrap Core CSS -->
+    <link href="./libraries/main/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./libraries/main/css/helper.css" rel="stylesheet">
+    <link href="./libraries/main/css/style.css" rel="stylesheet">
+
+    <title>Bitcoin</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./libraries/main/bootstrap.min.css">
+
+    <script type="text/javascript" src="./libraries/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="./libraries/jquery.countdownTimer.js"></script>
+    <link rel="stylesheet" type="text/css" href="./libraries/jquery.countdownTimer.css" />
+
+    <script src="./libraries/angular.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
+    <!--[if lt IE 9]>
+    <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar" ng-app="tableApp" ng-controller="tableCtrl">
+    <!-- Preloader - style you can find in spinners.css -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <!-- Main wrapper  -->
+    <div id="main-wrapper">
+        <div class="header">
+
+        </div>
+        <!-- End header header -->
+        <!-- Left Sidebar  -->
+        <div class="left-sidebar" style="background-color: black;">
+                <img src="./libraries/main/images/logo.png" style="margin-top: -30%;" height="50" width="70">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" style="background-color: black;">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav" style="background-color: black;">
+                    <ul id="sidebarnav">
+                        <li class="nav-devider"></li>
+
+                        <li>
+                            <a href="/" aria-expanded="false">
+                                <i class="fa fa-tachometer"></i>
+                                <span class="hide-menu">Pool
+
+                                </span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="/Vault" aria-expanded="false">
+                                <i class="fa fa-columns"></i>
+                                <span class="hide-menu">ORME Vaults</span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="/Chart" aria-expanded="false">
+                                <i class="fa fa-envelope"></i>
+                                <span class="hide-menu">BTC Mined</span>
+                            </a>
+
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </div>
+        <!-- End Left Sidebar  -->
+        <!-- Page wrapper  -->
+        <div class="page-wrapper" style="background-color: black;">
+            <!-- Bread crumb -->
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-primary">Pool</h3>
+                </div>
+
+                <div class="col-md-7 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0)" style="color:goldenrod">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active">Pool</li>
+                    </ol>
+                </div>
+            </div>
+            <hr id="hr2">
+            <!-- End Bread crumb -->
+            <!-- Container fluid  -->
+            <div class="container-fluid">
+                <!-- Start Page Content -->
+                <div class="row">
+                    <div class="col-12">
+                        <style>
+                            #heading {
+
+                                background: transparent;
+                                border: 0;
+                                font-size: 30px;
+                                max-height: 999999px;
+                                margin: 0;
+                                outline: 0;
+                                padding: 0;
+                                vertical-align: baseline;
+                                margin-left: 40%;
+                                margin-top: 20px;
+
+                            }
+
+                            #hr2 {
+
+                                width: 99%;
+                                margin-left: 0%;
+                                border-top: 1px solid goldenrod;
+                            }
+
+                            .table>tbody>tr>td {
+
+                                font-size: 11px;
+                            }
+
+                            #unit {
+
+                                font-size: 0.8em;
+                                color: #775577;
+                            }
+
+                            .card1 {
+
+                                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                                transition: 0.3s;
+                                background-color: black;
+                                height: 255px;
+
+                            }
+
+                            .hide-menu:hover {
+
+                                color: goldenrod;
+                            }
+
+
+                            #tbody:hover {
+
+                                color: goldenrod;
+                            }
+
+                            .table>thead>tr>th {
+                                vertical-align: bottom;
+                                border-bottom: 2px solid #ddd;
+                                color: goldenrod;
+
+                            }
+
+                            .card2 {
+
+                                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                                transition: 0.3s;
+                                width: 80%;
+                                margin-left: 10%;
+                                margin-top: -10px;
+                                background-color: black;
+
+                            }
+
+                            #subhead {
+                                background: transparent;
+                                border: 0;
+                                font-size: 88%;
+                                max-height: 999999px;
+                                margin: 0;
+                                outline: 0;
+                                padding: 0;
+                                vertical-align: baseline;
+                                color: white;
+                                margin-left: 23%;
+                                margin-top: 5px;
+                            }
+
+
+                            #subhead2 {
+                                background: transparent;
+                                border: 0;
+                                font-size: 100%;
+                                max-height: 999999px;
+                                margin: 0;
+                                outline: 0;
+                                padding: 0;
+                                vertical-align: baseline;
+                                color: grey;
+                                margin-left: 38%;
+
+                            }
+
+                            hr {
+                                border: 0;
+                                border-top: 1px solid goldenrod;
+                                width: 50%;
+                                margin-left: 26%;
+
+                            }
+                        </style>
+
+                        <script>
+                            // Set the date we're counting down to
+                            var countDownDate = new Date("Apr 17, 2018 15:37:25").getTime();
+
+                            // Update the count down every 1 second
+                            var x = setInterval(function () {
+
+                                // Get todays date and time
+                                var now = new Date().getTime();
+
+                                // Find the distance between now an the count down date
+                                var distance = countDownDate - now;
+
+                                // Time calculations for days, hours, minutes and seconds
+                                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                                // Output the result in an element with id="demo"
+                                document.getElementById("demo").innerHTML = hours + "h " +
+                                    minutes + "m " + seconds + "s ";
+
+                                // If the count down is over, write some text 
+                                if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("demo").innerHTML = "EXPIRED";
+                                }
+                            }, 1000);
+                        </script>
+                        <section class="card">
+                            <div class="row">
+
+
+                                <!-- FIRST CARD -->
+                                <div class="col-sm-6">
+
+                                    <div class="card1">
+
+                                        <p id="heading">398
+                                            <span id="unit"> Ph/s</span>
+                                        </p>
+                                        <p id="subhead">Pool Effective Hash Rate (30 min average)</p>
+                                        <hr>
+
+                                        <div class="card2">
+                                            <div class="row">
+
+                                                <div class="col-sm-6">
+
+                                                    <h3 style="margin-left: 24%;color: white">139389</h3>
+                                                    <p id="subhead">Active Workers</p>
+                                                </div>
+
+                                                <div class="col-sm-6">
+
+                                                    <h3 style="margin-left: 24%;color: white">18598</h3>
+                                                    <p id="subhead">Active Users</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin-left:2%;margin-top: 5%">
+
+                                            <div class="col-sm-9">
+                                                <p>Block Number</p>
+                                                <p>Block Difficulty </p>
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <p>518428</p>
+                                                <p style="font-size: 12px">3839316899029</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <!-- SECOND CARD -->
+
+                                <div class="col-sm-6">
+
+                                    <div class="card1">
+
+                                        <p id="heading">
+                                            <p id="demo"  style="margin-left: 43%;font-size:20px">  <span id="unit"> Eh/s</span></p>
+                                          
+                                        </p>
+                                        <p id="subhead2">Current Round Duration</p>
+                                        <hr>
+
+                                        <div class="card2">
+                                            <div class="row">
+
+                                                <div class="col-sm-4">
+
+                                                    <h3 style="margin-left: 21%;color: white">74.52
+                                                        <span style="color: white">%</span>
+                                                    </h3>
+                                                    <p id="subhead">Last 10 Blocks
+                                                    </p>
+                                                </div>
+
+                                                <div class="col-sm-4">
+
+                                                    <h3 style="margin-left: 21%;color: white">96.06
+                                                        <span style="color: white;">%</span>
+                                                    </h3>
+                                                    <p id="subhead">Last 50 Blocks
+                                                    </p>
+                                                </div>
+
+                                                <div class="col-sm-4">
+
+                                                    <h3 style="margin-left: 21%;color: white">97.21
+                                                        <span style="color: white">%</span>
+                                                    </h3>
+                                                    <p id="subhead">Last 250 Blocks
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin-left:2%;margin-top: 5%">
+
+                                            <div class="col-sm-8">
+                                                <p>Average Round Duration
+                                                </p>
+                                                <p>Current Round Start
+                                                </p>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <p>1 Hour 29 Minutes</p>
+                                                <p>2018-04-16 06:12</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <table class="table table-hover" style="margin-top: 3%;">
+                                <thead>
+                                    <tr>
+                                        <th>Block Height</th>
+                                        <th>Time</th>
+                                        <th>Block Hash
+                                        </th>
+                                        <th>Value</th>
+                                        <th>Status</th>
+                                        <th>Duration</th>
+                                        <th>Luck</th>
+                                        <th>Hashrate</th>
+                                        <th>Total Shares
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody" ng-repeat="table in tabledata">
+                                    <tr>
+                                        <td>{{table.BlockHeight}}</td>
+                                        <td>{{table.Time}}</td>
+                                        <td>{{table.BlockHash}}</td>
+                                        <td>{{table.Value}}</td>
+                                        <td>{{table.Status}}</td>
+                                        <td>{{table.Duration}}</td>
+                                        <td>{{table.Luck}}</td>
+                                        <td>{{table.Hashrate}}</td>
+                                        <td>{{table.TotalShares}}</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </section>
+
+                    </div>
+                </div>
+                <!-- End PAge Content -->
+            </div>
+            <!-- End Container fluid  -->
+            <!-- footer -->
+
+            <!-- End footer -->
+        </div>
+        <!-- End Page wrapper  -->
+    </div>
+    <!-- End Wrapper -->
+    <!-- All Jquery -->
+    <script src="./libraries/main/js/lib/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="./libraries/main/js/lib/bootstrap/js/popper.min.js"></script>
+    <script src="./libraries/main/js/lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="./libraries/main/js/jquery.slimscroll.js"></script>
+    <!--Menu sidebar -->
+    <script src="./libraries/main/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="./libraries/main/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="./libraries/main/js/lib/html5-editor/wysihtml5-0.3.0.js"></script>
+    <script src="./libraries/main/js/lib/html5-editor/bootstrap-wysihtml5.js"></script>
+    <script src="./libraries/main/js/lib/html5-editor/wysihtml5-init.js"></script>
+    <!--Custom JavaScript -->
+    <script src="./libraries/main/js/custom.min.js"></script>
+    <script src="./angular/tables.js"></script>
+
+</body>
+
+</html>
